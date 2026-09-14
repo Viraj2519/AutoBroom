@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 
-const defaultWhatsAppLink = 'https://wa.me/15519988884'
+const contactPhone = '519-998-8884'
+const contactPhoneHref = 'tel:+15199988884'
+const defaultWhatsAppLink = 'https://wa.me/15199988884'
 
 const services = [
   {
@@ -280,11 +282,11 @@ function App() {
           </div>
 
           <div className="nav__cta">
-            <a className="nav__phone" href="tel:5199988884">
+            <a className="nav__phone" href={contactPhoneHref}>
               <span>Call or text</span>
-              <strong>519-998-8884</strong>
+              <strong>{contactPhone}</strong>
             </a>
-            <a className="btn btn--primary btn--sm" href="tel:5199988884">
+            <a className="btn btn--primary btn--sm" href={contactPhoneHref}>
               <Icon name="i-phone" /> Call Now
             </a>
             <button
@@ -304,8 +306,8 @@ function App() {
                 {link.label}
               </a>
             ))}
-            <a className="btn btn--primary btn--block" href="tel:5199988884">
-              <Icon name="i-phone" /> Call 519-998-8884
+            <a className="btn btn--primary btn--block" href={contactPhoneHref}>
+              <Icon name="i-phone" /> Call {contactPhone}
             </a>
           </div>
         </div>
@@ -330,8 +332,8 @@ function App() {
                 everything I need, and you get a spotless car without ever leaving home.
               </p>
               <div className="hero__actions reveal" style={{ transitionDelay: '270ms' }}>
-                <a className="btn btn--primary" href="tel:5199988884">
-                  <Icon name="i-phone" /> Call 519-998-8884
+                <a className="btn btn--primary" href={contactPhoneHref}>
+                  <Icon name="i-phone" /> Call {contactPhone}
                 </a>
                 <a className="btn btn--ghost" href="#contact">
                   <Icon name="i-msg" /> Request a quote
@@ -390,7 +392,7 @@ function App() {
                 <p className="banner__lede">
                   The complete Auto Broom treatment. One booking, one visit, a car that looks and feels brand new.
                 </p>
-                <a className="btn btn--ghost" href="tel:5199988884">
+                <a className="btn btn--ghost" href={contactPhoneHref}>
                   <Icon name="i-phone" /> Book this package
                 </a>
               </div>
@@ -468,9 +470,9 @@ function App() {
                 <p className="contact__text">Give me a call anytime — I usually confirm bookings within the same day.</p>
 
                 <div className="contact__list">
-                  <a className="contact__row" href="tel:5199988884">
+                  <a className="contact__row" href={contactPhoneHref}>
                     <Icon name="i-phone" />
-                    <span><strong>519-998-8884</strong><span>Call directly</span></span>
+                    <span><strong>{contactPhone}</strong><span>Call directly</span></span>
                   </a>
                   <div className="contact__row">
                     <Icon name="i-pin" />
@@ -536,7 +538,7 @@ function App() {
       </footer>
 
       <div className="mobile-bar">
-        <a className="btn btn--primary" href="tel:5199988884">
+        <a className="btn btn--primary" href={contactPhoneHref}>
           <Icon name="i-phone" /> Call now
         </a>
       </div>
