@@ -41,12 +41,12 @@ const whyUs = [
   {
     icon: 'i-shield',
     title: 'Reliable & straightforward',
-    text: 'I show up when I say I will and treat your car like it is my own.',
+    text: 'We show up when we say we will and treat your car like it is our own.',
   },
   {
     icon: 'i-home',
     title: 'Convenient at your place',
-    text: 'I bring the full setup to your driveway, office lot, or wherever your car is parked.',
+    text: 'We bring the full setup to your driveway, office lot, or wherever your car is parked.',
   },
   {
     icon: 'i-heart',
@@ -64,25 +64,25 @@ const steps = [
   {
     step: 'Step 1',
     title: 'Book your slot',
-    description: "Give me a call with your vehicle and the service you want. I’ll confirm a time that works for you.",
+    description: "Give us a call with your vehicle and the service you want. We’ll confirm a time that works for you.",
     side: 'left',
   },
   {
     step: 'Step 2',
-    title: 'I come to you',
-    description: 'I bring the setup to your home, workplace, or wherever your car is parked.',
+    title: 'We come to you',
+    description: 'We bring the setup to your home, workplace, or wherever your car is parked.',
     side: 'right',
   },
   {
     step: 'Step 3',
-    title: 'I detail, by hand',
+    title: 'We detail, by hand',
     description: 'Interior, exterior, or both — every panel and surface gets careful, hands-on attention.',
     side: 'left',
   },
   {
     step: 'Step 4',
     title: 'Enjoy the ride',
-    description: 'I wrap up, walk you through the work, and leave you with a clean car and a happier drive.',
+    description: 'We wrap up, walk you through the work, and leave you with a clean car and a happier drive.',
     side: 'right',
   },
 ]
@@ -259,12 +259,12 @@ function App() {
 
       <nav className={`nav ${isScrolled ? 'is-scrolled' : ''} ${isMenuOpen ? 'is-open' : ''}`} id="nav">
         <div className="container nav__inner">
-          <a className="brand" href="#top">
-            <span className="brand__mark"><Icon name="i-car" /></span>
-            <span>
-              <span className="brand__name">AUTO <span>BROOM</span></span>
-              <span className="brand__sub">MOBILE AUTO DETAILING</span>
-            </span>
+          <a className="brand" href="#top" aria-label="Auto Broom home">
+            <img
+              className="brand__logo"
+              src="/media/Logo.png"
+              alt="Auto Broom logo"
+            />
           </a>
 
           <div className="nav__links" id="nav-links">
@@ -322,14 +322,16 @@ function App() {
           <div className="container hero__layout">
             <div>
               <span className="hero__badge reveal" style={{ transitionDelay: '0ms' }}>
-                <Icon name="i-pin" /> I come to you — home, work, anywhere
+                <Icon name="i-pin" /> Services that come to you
               </span>
               <h1 className="hero__title reveal" style={{ transitionDelay: '90ms' }}>
-                Professional car cleaning, done by one guy, at your doorstep.
+                Premium car care, delivered to your doorstep.
               </h1>
               <p className="hero__lede reveal" style={{ transitionDelay: '180ms' }}>
-                Auto Broom is a one-person mobile detailing service. You book a time, I show up with
-                everything I need, and you get a spotless car without ever leaving home.
+                Auto Broom brings professional mobile auto detailing directly to your doorstep. From
+                interior deep cleaning and exterior detailing to full vehicle care and specialized
+                services, we provide convenient, reliable detailing with attention to every detail — so
+                your vehicle gets the care it deserves without the hassle of visiting a shop.
               </p>
               <div className="hero__actions reveal" style={{ transitionDelay: '270ms' }}>
                 <a className="btn btn--primary" href={contactPhoneHref}>
@@ -349,11 +351,11 @@ function App() {
 
             <div className="hero__visual reveal -right" style={{ transitionDelay: '450ms' }}>
               <div className="hero__stage">
-                <div className="hero__car">
-                  <svg className="icon" viewBox="0 0 200 90">
-                    <use href="#i-car-line" xlinkHref="#i-car-line" />
-                  </svg>
-                </div>
+                <img
+                  className="hero__car-image"
+                  src="/media/unnamed.jpg"
+                  alt="Clean car detail showcase"
+                />
               </div>
               <span className="hero__chip hero__chip--1"><Icon name="i-sparkles" /> Full detail</span>
               <span className="hero__chip hero__chip--2"><Icon name="i-droplet" /> Stain-free finish</span>
@@ -365,7 +367,7 @@ function App() {
         <section className="section" id="services">
           <div className="container">
             <div className="section__head reveal">
-              <span className="kicker">What I offer</span>
+              <span className="kicker">What we offer</span>
               <h2 className="section__title">Detailing services</h2>
               <p className="section__lede">
                 From a quick refresh to a full interior-and-exterior restoration, every visit is done by hand,
@@ -396,9 +398,13 @@ function App() {
                   <Icon name="i-phone" /> Book this package
                 </a>
               </div>
-              <svg className="banner__icon" viewBox="0 0 200 90">
-                <use href="#i-car-line" xlinkHref="#i-car-line" />
-              </svg>
+              <div className="banner__media">
+                <img
+                  className="banner__image"
+                  src="/media/a2.jpg"
+                  alt="Premium full-detail vehicle finish"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -406,10 +412,13 @@ function App() {
         <section className="section section--alt" id="why-us">
           <div className="container">
             <div className="section__head reveal">
-              <span className="kicker">Why book with me</span>
-              <h2 className="section__title">Built around your time, not mine</h2>
+              <span className="kicker">Why choose us</span>
+              <h2 className="section__title">Built around your time, not ours</h2>
               <p className="section__lede">
-                No shop to drive to, no waiting room. Just me, my gear, and a clean car wherever you already are.
+                Auto Broom brings professional mobile auto detailing directly to your doorstep. From
+                interior deep cleaning and exterior detailing to full vehicle care and specialized
+                services, we provide convenient, reliable detailing with attention to every detail — so
+                your vehicle gets the care it deserves without the hassle of visiting a shop.
               </p>
             </div>
 
@@ -466,8 +475,8 @@ function App() {
 
             <div className="contact__layout">
               <div className="reveal -left">
-                <h3 className="contact__title">The fastest way to reach me</h3>
-                <p className="contact__text">Give me a call anytime — I usually confirm bookings within the same day.</p>
+<h3 className="contact__title">The fastest way to reach us</h3>
+              <p className="contact__text">Give us a call anytime — we usually confirm bookings within the same day.</p>
 
                 <div className="contact__list">
                   <a className="contact__row" href={contactPhoneHref}>
@@ -476,7 +485,7 @@ function App() {
                   </a>
                   <div className="contact__row">
                     <Icon name="i-pin" />
-                    <span><strong>I come to you</strong><span>Home, work, or anywhere your car is parked</span></span>
+                    <span><strong>We come to you</strong><span>Home, work, or anywhere your vehicle is parked</span></span>
                   </div>
                 </div>
               </div>
@@ -515,7 +524,7 @@ function App() {
                   <Icon name="i-msg" /> {submitLabel}
                 </button>
 
-                <p className="form__note">Use the quote form below to send me your details through WhatsApp — phone is optional.</p>
+                <p className="form__note">Use the quote form below to send us your details through WhatsApp — phone is optional.</p>
               </form>
             </div>
           </div>
